@@ -13,10 +13,10 @@ import {
   Unstable_Grid2 as Grid
 } from '@mui/material';
 import { Layout as DashboardLayout } from 'src/layouts/dashboard/layout';
-import { CompanyCard } from 'src/sections/companies/company-card';
-import { CompaniesSearch } from 'src/sections/companies/companies-search';
+import { InterviewsCard } from 'src/sections/interviews/interviews-card';
+import { InterviewsSearch } from 'src/sections/interviews/interviews-search';
 
-const companies = [
+const interviews = [
   {
     id: '2569ce0d517a7f06d3ea1f24',
     createdAt: '27/03/2019',
@@ -71,7 +71,7 @@ const Page = () => (
   <>
     <Head>
       <title>
-        Companies | Devias Kit
+        Interview | Devias Kit
       </title>
     </Head>
     <Box
@@ -90,7 +90,7 @@ const Page = () => (
           >
             <Stack spacing={1}>
               <Typography variant="h4">
-                Companies
+                Interviews
               </Typography>
               <Stack
                 alignItems="center"
@@ -132,19 +132,19 @@ const Page = () => (
               </Button>
             </div>
           </Stack>
-          <CompaniesSearch />
+          <InterviewsSearch />
           <Grid
             container
             spacing={3}
           >
-            {companies.map((company) => (
+            {interviews.map((interview) => (
               <Grid
                 xs={12}
                 md={6}
                 lg={4}
-                key={company.id}
+                key={interview.id}
               >
-                <CompanyCard company={company} />
+                <InterviewsCard interview={interview} />
               </Grid>
             ))}
           </Grid>
