@@ -28,6 +28,24 @@ export const items = [
     )
   },
   {
+    title: 'Job Positions',
+    path: '/jobs',
+    icon: (
+      <SvgIcon fontSize="small">
+        <UsersIcon />
+      </SvgIcon>
+    )
+  },
+  {
+    title: 'Freelancer Projects',
+    path: '/freelancer',
+    icon: (
+      <SvgIcon fontSize="small">
+        <UsersIcon />
+      </SvgIcon>
+    )
+  },
+  {
     title: 'Resumes',
     path: '/resumes',
     icon: (
