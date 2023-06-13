@@ -22,7 +22,7 @@ export const ResumeCard = (props) => {
                         pb: 3
                     }}
                 >
-                    <Avatar
+                    <img
                         src={resume.logo}
                         variant="square"
                     />
@@ -66,7 +66,7 @@ export const ResumeCard = (props) => {
                         display="inline"
                         variant="body2"
                     >
-                        Updated 2hr ago
+                        {resume.createdAt}
                     </Typography>
                 </Stack>
                 <Stack
@@ -74,18 +74,18 @@ export const ResumeCard = (props) => {
                     direction="row"
                     spacing={1}
                 >
-                    <SvgIcon
+                    {/* <SvgIcon
                         color="action"
                         fontSize="small"
                     >
                         <ArrowDownOnSquareIcon />
-                    </SvgIcon>
+                    </SvgIcon> */}
                     <Typography
                         color="text.secondary"
                         display="inline"
                         variant="body2"
                     >
-                        {resume.downloads} Downloads
+                        {resume.downloads}
                     </Typography>
                 </Stack>
             </Stack>

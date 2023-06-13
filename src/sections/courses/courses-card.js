@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import ArrowDownOnSquareIcon from '@heroicons/react/24/solid/ArrowDownOnSquareIcon';
 import ClockIcon from '@heroicons/react/24/solid/ClockIcon';
-import { Avatar, Box, Card, CardContent, Divider, Stack, SvgIcon, Typography } from '@mui/material';
+import { Avatar, Box, Card, CardContent, Divider, Stack, SvgIcon, Typography, CardMedia } from '@mui/material';
 
 export const CoursesCard = (props) => {
     const { course } = props;
@@ -14,8 +14,12 @@ export const CoursesCard = (props) => {
                 height: '100%'
             }}
         >
+            <CardMedia
+                sx={{ height: 200 }}
+                image={course.logo}
+            />
             <CardContent>
-                <Box
+                {/* <Box
                     sx={{
                         display: 'flex',
                         justifyContent: 'center',
@@ -26,16 +30,16 @@ export const CoursesCard = (props) => {
                         src={course.logo}
                         variant="square"
                     />
-                </Box>
+                </Box> */}
                 <Typography
-                    align="center"
+                    // align="center"
                     gutterBottom
                     variant="h5"
                 >
                     {course.title}
                 </Typography>
                 <Typography
-                    align="center"
+                    // align="center"
                     variant="body1"
                 >
                     {course.description}
@@ -74,18 +78,18 @@ export const CoursesCard = (props) => {
                     direction="row"
                     spacing={1}
                 >
-                    <SvgIcon
+                    {/* <SvgIcon
                         color="action"
                         fontSize="small"
                     >
                         <ArrowDownOnSquareIcon />
-                    </SvgIcon>
+                    </SvgIcon> */}
                     <Typography
                         color="text.secondary"
                         display="inline"
                         variant="body2"
                     >
-                        {course.downloads} Downloads
+                        {course.downloads}
                     </Typography>
                 </Stack>
             </Stack>

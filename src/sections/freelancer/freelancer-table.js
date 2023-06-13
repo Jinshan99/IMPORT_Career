@@ -23,7 +23,7 @@ export const FreelancerTable = (props) => {
     items = [],
     onDeselectAll,
     onDeselectOne,
-    onPageChange = () => {},
+    onPageChange = () => { },
     onRowsPerPageChange,
     onSelectAll,
     onSelectOne,
@@ -56,19 +56,22 @@ export const FreelancerTable = (props) => {
                   />
                 </TableCell>
                 <TableCell>
-                  Name
-                </TableCell>
-                <TableCell>
-                  Email
+                  Project Name
                 </TableCell>
                 <TableCell>
                   Location
                 </TableCell>
                 <TableCell>
-                  Phone
+                  Project Type
                 </TableCell>
                 <TableCell>
-                  Signed Up
+                  Post Time
+                </TableCell>
+                <TableCell>
+                  Contact
+                </TableCell>
+                <TableCell>
+                  Project Link
                 </TableCell>
               </TableRow>
             </TableHead>
@@ -102,25 +105,30 @@ export const FreelancerTable = (props) => {
                         spacing={2}
                       >
                         <Avatar src={customer.avatar}>
-                          {getInitials(customer.name)}
+                          {getInitials(customer.project_name)}
                         </Avatar>
                         <Typography variant="subtitle2">
-                          {customer.name}
+                          {customer.project_name}
                         </Typography>
                       </Stack>
                     </TableCell>
-                    <TableCell>
-                      {customer.email}
-                    </TableCell>
+
                     <TableCell>
                       {customer.address.city}, {customer.address.state}, {customer.address.country}
                     </TableCell>
                     <TableCell>
-                      {customer.phone}
+                      {customer.project_type}
                     </TableCell>
                     <TableCell>
                       {createdAt}
                     </TableCell>
+                    <TableCell>
+                      {customer.contact}
+                    </TableCell>
+                    <TableCell>
+                      <a href={customer.project_link} target="_blank">Details</a>
+                    </TableCell>
+
                   </TableRow>
                 );
               })}

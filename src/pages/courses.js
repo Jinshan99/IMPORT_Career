@@ -20,10 +20,11 @@ const courses = [
     {
         id: '2569ce0d517a7f06d3ea1f24',
         createdAt: '27/03/2019',
-        description: 'Dropbox is a file hosting service that offers cloud storage, file synchronization, a personal cloud.',
-        logo: '/assets/logos/logo-dropbox.png',
-        title: 'Dropbox',
-        downloads: '594'
+        description: 'This Data Science Interview Questions and Answers video will help you to prepare yourself for Data Science and Big Data Analytics interviews. This video is ideal for both beginners as well as professionals who want to learn or brush up their concepts in Data Science, Big Data Analytics and Machine Learning.',
+        logo: '/assets/course/ds_course.jpeg',
+        link: 'https://www.youtube.com/watch?v=tTAieUcNHdY',
+        title: 'Data Science Interview Questions',
+        downloads: 'Youtube'
     },
     {
         id: 'ed2b900870ceba72d203ec15',
@@ -144,7 +145,8 @@ const Page = () => (
                                 lg={4}
                                 key={course.id}
                             >
-                                <CoursesCard course={course} />
+
+                                <a href={course.link} target="_blank" style={{ textDecoration: 'none' }}><CoursesCard course={course} /></a>
                             </Grid>
                         ))}
                     </Grid>

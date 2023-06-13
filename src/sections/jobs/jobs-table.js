@@ -23,7 +23,7 @@ export const JobsTable = (props) => {
     items = [],
     onDeselectAll,
     onDeselectOne,
-    onPageChange = () => {},
+    onPageChange = () => { },
     onRowsPerPageChange,
     onSelectAll,
     onSelectOne,
@@ -56,19 +56,22 @@ export const JobsTable = (props) => {
                   />
                 </TableCell>
                 <TableCell>
-                  Name
+                  Company Name
                 </TableCell>
                 <TableCell>
-                  Email
+                  Job Name
                 </TableCell>
                 <TableCell>
                   Location
                 </TableCell>
                 <TableCell>
-                  Phone
+                  Job Type
                 </TableCell>
                 <TableCell>
-                  Signed Up
+                  Post Time
+                </TableCell>
+                <TableCell>
+                  Position Link
                 </TableCell>
               </TableRow>
             </TableHead>
@@ -102,24 +105,27 @@ export const JobsTable = (props) => {
                         spacing={2}
                       >
                         <Avatar src={customer.avatar}>
-                          {getInitials(customer.name)}
+                          {getInitials(customer.company_name)}
                         </Avatar>
                         <Typography variant="subtitle2">
-                          {customer.name}
+                          {customer.company_name}
                         </Typography>
                       </Stack>
                     </TableCell>
                     <TableCell>
-                      {customer.email}
+                      {customer.job_name}
                     </TableCell>
                     <TableCell>
                       {customer.address.city}, {customer.address.state}, {customer.address.country}
                     </TableCell>
                     <TableCell>
-                      {customer.phone}
+                      {customer.job_type}
                     </TableCell>
                     <TableCell>
                       {createdAt}
+                    </TableCell>
+                    <TableCell>
+                      <a href={customer.job_link} target="_blank">Apply Now</a>
                     </TableCell>
                   </TableRow>
                 );
